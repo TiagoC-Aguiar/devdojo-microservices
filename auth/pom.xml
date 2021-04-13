@@ -3,33 +3,43 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>devdojo-microservices</artifactId>
 		<groupId>academy.devdojo.youtube</groupId>
+		<artifactId>devdojo-microservices</artifactId>
 		<version>0.1-SNAPSHOT</version>
-		<relativePath>../</relativePath>
+		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
 
-	<artifactId>gateway</artifactId>
+	<groupId>academy.devdojo.youtube</groupId>
+	<artifactId>auth</artifactId>
 	<version>0.1-SNAPSHOT</version>
-	<name>gateway</name>
+	<name>auth</name>
 	<description>Demo project for Spring Boot</description>
-
 	<properties>
 		<java.version>1.8</java.version>
+		<devdojo-core.version>0.1-SNAPSHOT</devdojo-core.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-			<version>2.2.6.RELEASE</version>
-
+			<groupId>academy.devdojo.youtube</groupId>
+			<artifactId>core</artifactId>
+			<version>${devdojo-core.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
-		<finalName>gateway</finalName>
+		<finalName>course</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

@@ -1,10 +1,10 @@
-package academy.devdojo.youtube;
+package academy.devdojo.youtube.auth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DiscoveryApplicationTests {
+class AuthApplicationTests {
 
 	@Test
 	void contextLoads() {
